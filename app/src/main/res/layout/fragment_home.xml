@@ -167,7 +167,7 @@
             android:id="@+id/alleventsrecycler"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             android:orientation="vertical"
-            android:layout_marginRight="7dp"
+            android:layout_marginRight="0dp"
             android:layout_marginBottom="80dp"
             tools:listitem="@layout/list_itemvertical"
             tools:ignore="MissingConstraints" />
