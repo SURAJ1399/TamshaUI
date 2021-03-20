@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 import net.developers.ttamasha.R
+import net.developers.ttamasha.databinding.ListItemBinding
 import net.developers.ttamasha.databinding.ListItemverticalBinding
 import java.lang.String
 import java.util.concurrent.TimeUnit
@@ -43,7 +44,7 @@ context=parent.context
 
 
 
-        ListItemverticalBinding.bind(holder.itemView).apply {
+        ListItemBinding.bind(holder.itemView).apply {
             object : CountDownTimer(300000, 1000) {
                 override fun onTick(millis: Long) {
                     val hms = String.format(
