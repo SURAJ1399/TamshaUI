@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101637"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment">
+    
+    
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="28dp"
+                android:id="@+id/profile"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/defaultplayer"
+                android:layout_height="28dp">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/wallet"
+                android:layout_toRightOf="@id/profile"
+                android:background="@drawable/walletyellow"
+                android:layout_height="32dp">
+
+            </ImageView>
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_toRightOf="@id/wallet"
+                android:layout_height="26dp"
+                android:id="@+id/coins"
+                android:padding="3dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/btncurve"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/wallet"
+                    android:background="@drawable/coins"
+                    android:layout_height="15dp">
+
+
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:fontFamily="@font/pop"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="7dp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="57dp"
+                android:layout_toRightOf="@id/coins"
+                android:layout_height="26dp"
+
+                android:padding="3dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/btncurve"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/cash"
+                    android:layout_height="15dp">
+
+
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/pop"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="7dp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="40dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/infocircle"
+                android:layout_height="30dp"/>
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/chat"
+                android:layout_height="26dp">
+            </ImageView>
+
+        </RelativeLayout>
+
+   <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/text_home"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bannerb"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Token and Free Contests"
+            android:fontFamily="@font/gotham"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="@color/white"></TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="7"
+            android:id="@+id/alleventsrecycler2"
+            android:layout_marginLeft="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            tools:listitem="@layout/list_item"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All Events"
+            android:fontFamily="@font/gotham"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="@color/white"></TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="7"
+            app:spanCount="2"
+            android:id="@+id/alleventsrecycler"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            android:orientation="vertical"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="80dp"
+            tools:listitem="@layout/list_itemvertical"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+        </LinearLayout>
