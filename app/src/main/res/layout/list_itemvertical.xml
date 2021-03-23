@@ -24,7 +24,7 @@ android:layout_margin="5dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:layout_height="96dp"
-                android:background="@drawable/anchor"
+            android:src="@drawable/anchor"
                 app:civ_border_width="2dp"
                 app:civ_border_color="#FFFFFF"/>
 

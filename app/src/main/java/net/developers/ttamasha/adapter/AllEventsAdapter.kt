@@ -80,9 +80,9 @@ lateinit var context:Context
             eventName.setText(events.get(position).eventName)
             name.setText("Host ID:- "+events.get(position).eventHost)
             entryFee.setText("Entry ₹ "+events.get(position).entryFee)
-            Glide.with(context).load(events.get(position).imageURL)
+            Glide.with(context).load(events.get(position).imageURL).placeholder(R.drawable.anchor)
                 .into(profileImageSmall)
-            Glide.with(context).load(events.get(position).imageURL)
+            Glide.with(context).load(events.get(position).imageURL).placeholder(R.drawable.anchor)
                 .into(profileImage)
 
             val sdf = java.text.SimpleDateFormat("yyyy-MM-dd")
