@@ -24,9 +24,9 @@ android:layout_margin="5dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:layout_height="96dp"
-                android:src="@drawable/anchor"
+                android:background="@drawable/anchor"
                 app:civ_border_width="2dp"
-                app:civ_border_color="#FF000000"/>
+                app:civ_border_color="#FFFFFF"/>
 
 
             <RelativeLayout
@@ -48,6 +48,7 @@ android:layout_marginBottom="5dp"
                         android:fontFamily="@font/gotham"
                         android:text="Chidiya UDD"
                         android:textAllCaps="true"
+                        android:id="@+id/event_name"
                         android:textColor="@color/white"
                         android:textSize="10dp"></TextView>
 
@@ -81,6 +82,7 @@ android:layout_marginBottom="5dp"
                             android:layout_marginLeft="6dp"
                             android:fontFamily="@font/gotham"
 android:layout_gravity="center"
+                            android:id="@+id/entry_fee"
                             android:text="Entry ₹ 10"
                             android:textColor="@color/white"
                             android:textSize="10dp"></TextView>
@@ -104,6 +106,8 @@ android:layout_gravity="center"
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:layout_gravity="end"
                             android:orientation="horizontal">
 
                             <ImageView
@@ -116,7 +120,8 @@ android:layout_gravity="center"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:fontFamily="@font/gotham"
-                                android:text="20 Mar,4:45 PM"
+                                android:text="2020-08-11"
+                                android:id="@+id/ev_date"
                                 android:layout_marginLeft="5dp"
                                 android:textColor="@color/white"
                                 android:textSize="10dp"></TextView>
@@ -126,9 +131,10 @@ android:layout_gravity="center"
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
+                            android:layout_marginTop="5dp"
                             android:fontFamily="@font/gotham"
                             android:text="Starts In 9m:36s"
+                            android:layout_gravity="end"
                             android:textAllCaps="false"
                             android:id="@+id/starts"
                             android:textColor="@color/white"
@@ -143,6 +149,7 @@ android:layout_gravity="center"
                         android:layout_height="40dp"
                         android:src="@drawable/anchor"
                         app:civ_border_width="2dp"
+                        android:id="@+id/profile_image_small"
                         app:civ_border_color="#FF000000"></de.hdodenhof.circleimageview.CircleImageView>
                 </RelativeLayout>
 
@@ -150,7 +157,7 @@ android:layout_gravity="center"
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
+android:id="@+id/name"
                     android:layout_below="@+id/rl"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"

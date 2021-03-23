@@ -119,6 +119,7 @@
 
    <androidx.core.widget.NestedScrollView
     android:layout_width="match_parent"
+       android:id="@+id/nestedscrollvieww"
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
@@ -159,19 +160,26 @@
             android:textStyle="bold"
             android:textSize="15dp"
             android:textColor="@color/white"></TextView>
+
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/alleventsrecycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:itemCount="7"
-            app:spanCount="2"
-            android:id="@+id/alleventsrecycler"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            android:orientation="vertical"
             android:layout_marginRight="0dp"
             android:layout_marginBottom="80dp"
-            tools:listitem="@layout/list_itemvertical"
-            tools:ignore="MissingConstraints" />
+            android:nestedScrollingEnabled="false"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:ignore="MissingConstraints"
+            tools:itemCount="3"
+            tools:listitem="@layout/list_itemvertical" />
 
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="70dp"
+            android:id="@+id/progress" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
         </LinearLayout>
